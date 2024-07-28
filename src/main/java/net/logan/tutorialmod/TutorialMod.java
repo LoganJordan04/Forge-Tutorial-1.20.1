@@ -5,6 +5,7 @@ import net.logan.tutorialmod.block.ModBlocks;
 import net.logan.tutorialmod.item.ModCreativeModeTabs;
 import net.logan.tutorialmod.item.ModItems;
 import net.logan.tutorialmod.loot.ModLootModifiers;
+import net.logan.tutorialmod.villager.ModVillagers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -35,6 +36,7 @@ public class TutorialMod {
         ModBlocks.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+        ModVillagers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

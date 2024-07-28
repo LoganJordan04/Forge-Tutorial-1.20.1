@@ -2,7 +2,9 @@ package net.logan.tutorialmod.event;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.logan.tutorialmod.TutorialMod;
+import net.logan.tutorialmod.block.ModBlocks;
 import net.logan.tutorialmod.item.ModItems;
+import net.logan.tutorialmod.villager.ModVillagers;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.EnchantedBookItem;
@@ -49,11 +51,24 @@ public class ModEvents {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack enchantedBook = EnchantedBookItem.createForEnchantment(new EnchantmentInstance(Enchantments.SHARPNESS, 100));
             
-            // Level 1
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 32),
                     enchantedBook,
                     2, 16, 0.02f));
+        }
+        
+        if(event.getType() == ModVillagers.SOUND_MASTER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 16),
+                    new ItemStack(ModBlocks.SOUND_BLOCK.get(), 1),
+                    16, 8, 0.02f));
+
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 6),
+                    new ItemStack(ModBlocks.SAPPHIRE_ORE.get(), 2),
+                    5, 12, 0.02f));
         }
     }
     
