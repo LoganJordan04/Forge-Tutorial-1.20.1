@@ -5,6 +5,7 @@ import net.logan.tutorialmod.block.ModBlocks;
 import net.logan.tutorialmod.item.ModCreativeModeTabs;
 import net.logan.tutorialmod.item.ModItems;
 import net.logan.tutorialmod.loot.ModLootModifiers;
+import net.logan.tutorialmod.sound.ModSounds;
 import net.logan.tutorialmod.villager.ModVillagers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -37,6 +38,8 @@ public class TutorialMod {
 
         ModLootModifiers.register(modEventBus);
         ModVillagers.register(modEventBus);
+
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
