@@ -41,6 +41,9 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModBlocks.CATMINT.get());
 
+                        pOutput.accept(ModBlocks.GEM_POLISHING_STATION.get());
+
+                        
                         pOutput.accept(ModItems.SAPPHIRE.get());
                         pOutput.accept(ModItems.RAW_SAPPHIRE.get());
                         

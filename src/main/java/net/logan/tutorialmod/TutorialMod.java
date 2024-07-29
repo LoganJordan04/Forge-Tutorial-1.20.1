@@ -2,13 +2,17 @@ package net.logan.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.logan.tutorialmod.block.ModBlocks;
+import net.logan.tutorialmod.block.entity.ModBlockEntities;
 import net.logan.tutorialmod.entity.ModEntities;
 import net.logan.tutorialmod.entity.client.RhinoRenderer;
 import net.logan.tutorialmod.item.ModCreativeModeTabs;
 import net.logan.tutorialmod.item.ModItems;
 import net.logan.tutorialmod.loot.ModLootModifiers;
+import net.logan.tutorialmod.screen.GemPolishingStationScreen;
+import net.logan.tutorialmod.screen.ModMenuTypes;
 import net.logan.tutorialmod.sound.ModSounds;
 import net.logan.tutorialmod.villager.ModVillagers;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -45,6 +49,9 @@ public class TutorialMod {
         ModSounds.register(modEventBus);
         ModEntities.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -76,6 +83,8 @@ public class TutorialMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
         }
     }
 }
