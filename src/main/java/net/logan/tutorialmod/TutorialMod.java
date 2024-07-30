@@ -1,6 +1,7 @@
 package net.logan.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.logan.tutorialmod.Recipe.ModRecipes;
 import net.logan.tutorialmod.block.ModBlocks;
 import net.logan.tutorialmod.block.entity.ModBlockEntities;
 import net.logan.tutorialmod.entity.ModEntities;
@@ -51,6 +52,8 @@ public class TutorialMod {
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
