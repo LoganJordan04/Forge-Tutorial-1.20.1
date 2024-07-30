@@ -18,6 +18,9 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
                     .title(Component.translatable("creativetab.tutorial_tab"))
                     .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItems.SAPPHIRE.get());
+                        pOutput.accept(ModItems.RAW_SAPPHIRE.get());
+                        
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                         
                         pOutput.accept(ModBlocks.SAPPHIRE_STAIRS.get());
@@ -37,15 +40,19 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
 
+                        pOutput.accept(ModBlocks.PINE_LOG.get());
+                        pOutput.accept(ModBlocks.PINE_WOOD.get());
+                        pOutput.accept(ModBlocks.STRIPPED_PINE_LOG.get());
+                        pOutput.accept(ModBlocks.STRIPPED_PINE_WOOD.get());
+                        pOutput.accept(ModBlocks.PINE_PLANKS.get());
+
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
-
-                        pOutput.accept(ModBlocks.CATMINT.get());
-
+                        
                         pOutput.accept(ModBlocks.GEM_POLISHING_STATION.get());
 
+                        pOutput.accept(ModBlocks.PINE_LEAVES.get());
+                        pOutput.accept(ModBlocks.CATMINT.get());
                         
-                        pOutput.accept(ModItems.SAPPHIRE.get());
-                        pOutput.accept(ModItems.RAW_SAPPHIRE.get());
                         
                         pOutput.accept(ModItems.PINE_CONE.get());
                         pOutput.accept(ModItems.STRAWBERRY.get());
