@@ -18,11 +18,15 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
                     .title(Component.translatable("creativetab.tutorial_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModItems.SAPPHIRE.get());
-                        pOutput.accept(ModItems.RAW_SAPPHIRE.get());
-                        
+                        // Building Blocks
+                        pOutput.accept(ModBlocks.PINE_LOG.get());
+                        pOutput.accept(ModBlocks.PINE_WOOD.get());
+                        pOutput.accept(ModBlocks.STRIPPED_PINE_LOG.get());
+                        pOutput.accept(ModBlocks.STRIPPED_PINE_WOOD.get());
+                        pOutput.accept(ModBlocks.PINE_PLANKS.get());
+
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
-                        
+
                         pOutput.accept(ModBlocks.SAPPHIRE_STAIRS.get());
                         pOutput.accept(ModBlocks.SAPPHIRE_SLAB.get());
                         pOutput.accept(ModBlocks.SAPPHIRE_FENCE.get());
@@ -33,6 +37,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.SAPPHIRE_PRESSURE_PLATE.get());
                         pOutput.accept(ModBlocks.SAPPHIRE_BUTTON.get());
 
+                        // Natural Blocks
                         pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.NETHER_SAPPHIRE_ORE.get());
@@ -40,46 +45,52 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
 
-                        pOutput.accept(ModBlocks.PINE_LOG.get());
-                        pOutput.accept(ModBlocks.PINE_WOOD.get());
-                        pOutput.accept(ModBlocks.STRIPPED_PINE_LOG.get());
-                        pOutput.accept(ModBlocks.STRIPPED_PINE_WOOD.get());
-                        pOutput.accept(ModBlocks.PINE_PLANKS.get());
+                        pOutput.accept(ModBlocks.PINE_LEAVES.get());
+                        pOutput.accept(ModBlocks.CATMINT.get());
+
+                        pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
+                        pOutput.accept(ModItems.CORN_SEEDS.get());
+
+                        // Functional Blocks
+                        pOutput.accept(ModBlocks.GEM_POLISHING_STATION.get());
+
+                        pOutput.accept(ModBlocks.SOUND_BLOCK.get());
 
                         pOutput.accept(ModBlocks.PINE_SIGN.get());
                         pOutput.accept(ModBlocks.PINE_HANGING_SIGN.get());
 
-                        pOutput.accept(ModBlocks.SOUND_BLOCK.get());
-                        
-                        pOutput.accept(ModBlocks.GEM_POLISHING_STATION.get());
-
-                        pOutput.accept(ModBlocks.PINE_LEAVES.get());
-                        pOutput.accept(ModBlocks.CATMINT.get());
-                        
-                        
-                        pOutput.accept(ModItems.PINE_CONE.get());
-                        pOutput.accept(ModItems.STRAWBERRY.get());
-                        pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
-                        pOutput.accept(ModItems.CORN.get());
-                        pOutput.accept(ModItems.CORN_SEEDS.get());
-
+                        // Tools & Utilities
                         pOutput.accept(ModItems.SAPPHIRE_SWORD.get());
                         pOutput.accept(ModItems.SAPPHIRE_PICKAXE.get());
                         pOutput.accept(ModItems.SAPPHIRE_AXE.get());
                         pOutput.accept(ModItems.SAPPHIRE_SHOVEL.get());
                         pOutput.accept(ModItems.SAPPHIRE_HOE.get());
 
+                        pOutput.accept(ModItems.METAL_DETECTOR.get());
+                        pOutput.accept(ModItems.SAPPHIRE_STAFF.get());
+
+                        pOutput.accept(ModItems.PINE_BOAT.get());
+                        pOutput.accept(ModItems.PINE_CHEST_BOAT.get());
+
+                        pOutput.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
+
+                        // Combat
                         pOutput.accept(ModItems.SAPPHIRE_HELMET.get());
                         pOutput.accept(ModItems.SAPPHIRE_CHESTPLATE.get());
                         pOutput.accept(ModItems.SAPPHIRE_LEGGINGS.get());
                         pOutput.accept(ModItems.SAPPHIRE_BOOTS.get());
 
-                        pOutput.accept(ModItems.METAL_DETECTOR.get());
-                        pOutput.accept(ModItems.SAPPHIRE_STAFF.get());
+                        // Ingredients
+                        pOutput.accept(ModItems.RAW_SAPPHIRE.get());
+                        pOutput.accept(ModItems.SAPPHIRE.get());
+                        
+                        pOutput.accept(ModItems.PINE_CONE.get());
+                        pOutput.accept(ModItems.STRAWBERRY.get());
+                        pOutput.accept(ModItems.CORN.get());
 
-                        pOutput.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
-
+                        // Spawn Eggs
                         pOutput.accept(ModItems.RHINO_SPAWN_EGG.get());
+                        
                     })
                     .build());
     

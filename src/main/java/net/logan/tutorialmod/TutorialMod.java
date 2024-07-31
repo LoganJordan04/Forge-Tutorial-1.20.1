@@ -5,6 +5,7 @@ import net.logan.tutorialmod.Recipe.ModRecipes;
 import net.logan.tutorialmod.block.ModBlocks;
 import net.logan.tutorialmod.block.entity.ModBlockEntities;
 import net.logan.tutorialmod.entity.ModEntities;
+import net.logan.tutorialmod.entity.client.ModBoatRenderer;
 import net.logan.tutorialmod.entity.client.RhinoRenderer;
 import net.logan.tutorialmod.item.ModCreativeModeTabs;
 import net.logan.tutorialmod.item.ModItems;
@@ -90,6 +91,8 @@ public class TutorialMod {
             Sheets.addWoodType(ModWoodTypes.PINE);
             
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
+            EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
+            EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
 
             MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
         }
