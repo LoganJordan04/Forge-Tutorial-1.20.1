@@ -46,6 +46,9 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.STRIPPED_PINE_WOOD.get());
                         pOutput.accept(ModBlocks.PINE_PLANKS.get());
 
+                        pOutput.accept(ModBlocks.PINE_SIGN.get());
+                        pOutput.accept(ModBlocks.PINE_HANGING_SIGN.get());
+
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
                         
                         pOutput.accept(ModBlocks.GEM_POLISHING_STATION.get());
