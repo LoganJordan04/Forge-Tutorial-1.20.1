@@ -69,9 +69,11 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
                         pOutput.accept(ModItems.SAPPHIRE_STAFF.get());
 
+                        pOutput.accept(ModItems.DICE.get());
+
                         pOutput.accept(ModItems.PINE_BOAT.get());
                         pOutput.accept(ModItems.PINE_CHEST_BOAT.get());
-
+                        
                         pOutput.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
 
                         // Combat
