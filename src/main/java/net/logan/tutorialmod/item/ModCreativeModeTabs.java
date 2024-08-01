@@ -46,6 +46,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
 
                         pOutput.accept(ModBlocks.PINE_LEAVES.get());
+                        pOutput.accept(ModBlocks.PINE_SAPLING.get());
+                        
                         pOutput.accept(ModBlocks.CATMINT.get());
 
                         pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());

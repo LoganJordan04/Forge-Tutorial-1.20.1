@@ -5,6 +5,7 @@ import net.logan.tutorialmod.block.custom.*;
 import net.logan.tutorialmod.item.ModItems;
 import net.logan.tutorialmod.sound.ModSounds;
 import net.logan.tutorialmod.util.ModWoodTypes;
+import net.logan.tutorialmod.worldgen.tree.PineTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -146,6 +147,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> DICE_BLOCK = BLOCKS.register("dice_block",
             () -> new DiceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noLootTable()));
+
+    public static final RegistryObject<Block> PINE_SAPLING = registerBlock("pine_sapling",
+            () -> new SaplingBlock(new PineTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     
     
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
