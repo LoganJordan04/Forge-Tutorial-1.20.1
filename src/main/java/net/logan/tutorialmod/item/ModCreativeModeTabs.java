@@ -60,6 +60,8 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModBlocks.PINE_SIGN.get());
                         pOutput.accept(ModBlocks.PINE_HANGING_SIGN.get());
+                        
+                        pOutput.accept(ModBlocks.MOD_PORTAL.get());
 
                         // Tools & Utilities
                         pOutput.accept(ModItems.SAPPHIRE_SWORD.get());
